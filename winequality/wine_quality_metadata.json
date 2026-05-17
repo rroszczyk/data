@@ -1,0 +1,59 @@
+{
+  "dataset_name": "UCI Wine Quality",
+  "source": "UCI Machine Learning Repository: Wine Quality",
+  "source_url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+  "citation_ieee": "P. Cortez, A. Cerdeira, F. Almeida, T. Matos, and J. Reis, \"Modeling wine preferences by data mining from physicochemical properties,\" Decision Support Systems, vol. 47, no. 4, pp. 547-553, 2009.",
+  "input_files": [
+    "datasets/winequality-red.csv",
+    "datasets/winequality-white.csv",
+    "datasets/winequality.names"
+  ],
+  "prepared_at_utc": "2026-05-17T14:06:01+00:00",
+  "red_wine_records": 1599,
+  "white_wine_records": 4898,
+  "combined_records": 6497,
+  "column_count": 13,
+  "columns": [
+    "fixed acidity",
+    "volatile acidity",
+    "citric acid",
+    "residual sugar",
+    "chlorides",
+    "free sulfur dioxide",
+    "total sulfur dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol",
+    "quality",
+    "wine_type"
+  ],
+  "wine_type_description": "Added column identifying source dataset: red or white.",
+  "source_separator": ";",
+  "source_missing_values": "No blank values detected in source CSV files; winequality.names states Missing Attribute Values: None.",
+  "dirty_dataset": {
+    "file": "shared/data/wine_quality_teaching_dirty.csv",
+    "seed": 20260517,
+    "is_teaching_artifact": true,
+    "generated_problem_counts": {
+      "target_modified_rows": 1624,
+      "missing_values": 420,
+      "duplicate_rows_added": 180,
+      "inconsistent_wine_type": 340,
+      "numeric_values_as_text": 300,
+      "decimal_comma_values": 200,
+      "outlier_values": 200,
+      "quality_out_of_range": 164,
+      "dirty_total_rows": 6677,
+      "dirty_modified_row_share_percent": 25
+    }
+  },
+  "interpretation_limits": [
+    "Data concern Portuguese Vinho Verde wines and should not be generalized to all wines.",
+    "The dataset does not include grape variety, brand, price, vintage, or detailed production metadata.",
+    "quality is a sensory score and should be interpreted cautiously.",
+    "Quality classes are imbalanced.",
+    "Correlations and linear regression do not prove causality.",
+    "The dataset is suitable for teaching analysis and visualization, not for a complete technological model of wine quality."
+  ]
+}
